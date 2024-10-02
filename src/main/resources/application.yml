@@ -1,0 +1,61 @@
+server:
+  port: 9090
+  servlet:
+    session:
+      timeout: 15m
+  
+spring:
+  datasource:
+    name: quickCar
+    url: jdbc:mysql://localhost:3306/quickCar
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  application:
+    name: QuickCar
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mail_id
+    password: password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+twilio:
+  account:
+    sid: twillo_sid
+  auth:
+    token: twillo_token
+  phone:
+    number: +1234567890
+
+
+razorpay:
+  client:
+    key: rzp_test_key
+    secret: rzp_secret
+
+frontend:
+  base:
+    url: http://localhost:3000
+
+cloudinary:
+  cloud_name: cloud_name
+  api_key: api_key
+  api_secret: api_secret
+
+jwt:
+  secret: jwt_secret
